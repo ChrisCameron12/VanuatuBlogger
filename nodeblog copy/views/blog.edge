@@ -1,0 +1,195 @@
+@layout('layouts.dashboard')
+ 
+@section('content')
+
+
+<div class="content">
+    <nav class="sidebar">
+            <ul class="side-nav">
+                <li class="side-nav__item side-nav__item--active">
+                    <a href="/map" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-map"></use>
+    
+                        </svg>
+                        <span>Map</span>
+                        
+                    </a>
+    
+                </li>
+    
+                <li class="side-nav__item">
+                    <a href="/peopleculture" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-man-woman"></use>
+    
+                        </svg>
+                        <span>People and Culture</span>
+                        
+                    </a>
+    
+                </li>
+    
+                <li class="side-nav__item">
+                    <a href="/travel" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-travel"></use>
+    
+                        </svg>
+                        <span>Travel</span>
+                        
+                    </a>
+    
+                </li>
+    
+                <li class="side-nav__item">
+                    <a href="/accomodation" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+    
+                        </svg>
+                        <span>Accomodation</span>
+                        
+                    </a>
+    
+                </li>
+
+                <li class="side-nav__item">
+                    <a href="/itineraries" class="side-nav__link">
+                       
+                        <span>Itineraries</span>
+                        
+                    </a>
+    
+                </li>
+
+                <li class="side-nav__item">
+                    <a href="/allblogs" class="side-nav__link">
+                       
+                        <span>All blogs</span>
+                        
+                    </a>
+    
+                </li>
+            </ul>
+            
+            <div class="legal">
+                &copy: 2019 by trillo. All rights reserved. 
+            </div>
+        </nav>
+
+<section class="section-features"  >
+        <div class="row" style="padding:2.5rem"; >
+                <div class="col-1-of-2">
+                    <a href="/create/new">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-sheet"></i>
+                        <h3 class="heading-teriary">New Blog</h3>
+                        <p class="feature-box__text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    
+                        </p>
+                </div>
+            </a>
+            </div>
+            <div class="col-1-of-2">
+                    <div class="feature-box">
+                        <i class="feature-box__icon icon-basic-sheet-txt"></i>
+                        <h3 class="heading-teriary">Manage my Blogs</h3>
+                        <p class="feature-box__text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding:2.5rem"; >
+            <div class="col-1-of-3">
+                <div class="feature-box ">
+                    <i class="feature-box__icon icon-basic-world"></i>
+                    <h3 class="heading-teriary">Culture</h3>
+                    <p class="feature-box__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+
+                    </p>
+            </div>
+        </div>
+        <div class="col-1-of-3">
+            <div class="feature-box">
+                <i class="feature-box__icon icon-basic-compass"></i>
+                <h3 class="heading-teriary">Travel</h3>
+                <p class="feature-box__text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+
+                </p>
+        </div>
+    </div>
+   
+<div class="col-1-of-3">
+    <div class="feature-box">
+        <i class="feature-box__icon icon-basic-share"></i>
+        <h3 class="heading-teriary">Accomodation</h3>
+        <p class="feature-box__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+
+        </p>
+</div>
+</div>
+    </div> 
+
+</section>
+<hr>
+        
+
+<!-- recent posts section -->
+
+
+
+          
+           
+      
+
+
+
+
+</div>
+<!--<div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form action="/posts/store" method="POST" encType="multipart/form-data">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Username" class="form-control">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Title</label>
+                <input type="text" name="title" placeholder="Title" class="form-control">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Description</label>
+                <input type="text" name="description" placeholder="Description" class="form-control">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Content</label>
+                <textarea name="content" placeholder="Content ..." cols="30" rows="10" class="form-control"></textarea>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="file" name="image" class="form-control-file">
+            </div>
+            <div class="form-group my-4 text-center">
+              <button class="btn btn-primary">Create Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    -->
+
+
+  @endsection

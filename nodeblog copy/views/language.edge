@@ -1,0 +1,66 @@
+@layout('layouts.dashboard')
+ 
+@section('content')
+
+<div class="content">
+        <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item side-nav__item--active">
+                        <a href="/map" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+        
+                            </svg>
+                            <span>Map</span>
+                            
+                        </a>
+        
+                    </li>
+        
+                    <li class="side-nav__item">
+                        <a href="/peopleculture" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-man-woman"></use>
+        
+                            </svg>
+                            <span>People and Culture</span>
+                            
+                        </a>
+        
+                    </li>
+        
+                    <li class="side-nav__item">
+                        <a href="/travel" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-travel"></use>
+        
+                            </svg>
+                            <span>Travel</span>
+                            
+                        </a>
+        
+                    </li>
+        
+                    <li class="side-nav__item">
+                        <a href="/language" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+        
+                            </svg>
+                            <span>Language</span>
+                            
+                        </a>
+        
+                    </li>
+                </ul>
+                <div class="legal">
+                    &copy: 2019 by trillo. All rights reserved. 
+                </div>
+            </nav>
+    
+
+
+    
+</div>
+
+@endsection

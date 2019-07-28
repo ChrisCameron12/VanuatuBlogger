@@ -1,0 +1,59 @@
+@layout('layouts.app')
+ 
+@section('content')
+    <!-- Page Header -->
+    
+    <header class="header" style="height:70vh; background-image: url {{ post.image }}">
+    
+    
+        <!-- <div class="login-top"></div>--><!--this actually looks kinda cool. try use this-->
+     <div class="header__logo-box">
+             
+     </div>
+ 
+     <div class="header__text-box-center">
+         
+         <h1 class="heading-primary">
+            
+             <span class="heading-primary--main" style="text-align: center; margin-bottom: 5rem;">{{ post.title }}</span>
+            <div style="text-align: center">
+             <span class="publish-meta">Posted by
+               <a class="post-meta-hover" href="#">{{ post.username }}</a>
+               on {{ post.createdAt.toDateString() }}
+             </span>
+             <figcaption class="user__avatar">
+                <img src="/img/user-1.jpg" alt="User 1" class="user__photo">
+                
+                
+            </figcaption>  
+            </div>
+            
+         </h1>
+ 
+         
+     </div>
+
+     <div class="createpage-header-image">
+       <img src="" alt="">
+
+     </div>
+    
+     
+ 
+ 
+ </header>
+     
+    <!-- Post Content -->
+    <article>
+      <div class="post-wrapper ">
+        <div class="post-content-card dat-box-shadow">
+          <div class="center">
+            {{ post.content }}
+            
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+    <hr>
+@endsection

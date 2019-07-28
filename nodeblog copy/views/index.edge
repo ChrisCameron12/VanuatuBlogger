@@ -1,0 +1,69 @@
+@layout('layouts.app')
+ 
+@section('content')
+<!-- Page Header -->
+
+ 
+<!-- Main Content -->
+<div class="container">
+    <header class="header" style="height:70vh">
+    
+    
+        <!-- <div class="login-top"></div>--><!--this actually looks kinda cool. try use this-->
+     <div class="header__logo-box">
+             
+     </div>
+ 
+     <div class="header__text-box-center">
+         
+         <h1 class="heading-primary">
+             
+             <span class="heading-primary--main" style="text-align: center;">Recent Blogs</span>
+            
+         </h1>
+ 
+         
+     </div>
+
+     <div class="createpage-header-image">
+       <img src="" alt="">
+
+     </div>
+    
+     
+ 
+ 
+ </header>
+  <div class="row">
+    <div class="posts-list-main" style="font-size: 150%;">
+        <div class="posts-list">
+      @each(post in posts)
+      <a href="/post/{{ post._id }}">
+        <div class="post-preview">
+          
+            <h2 class="post-title">
+              {{ post.title }}
+            </h2>
+         
+          <p class="post-meta">Posted by
+            <a class="post-meta-hover" href="#">{{ post.username }}</a>
+            on {{ post.createdAt.toDateString() }}
+          </p>
+        </div>
+      </a>
+        <hr>
+      @endeach
+      <!-- Pager -->
+      
+      <br>
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" style="margin-top: 1rem" href="#">Older Posts &rarr;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+ 
+<hr>
+@endsection

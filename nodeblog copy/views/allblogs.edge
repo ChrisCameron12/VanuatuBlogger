@@ -1,0 +1,149 @@
+@layout('layouts.dashboard')
+ 
+@section('content')
+
+<div class="content">
+        <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item side-nav__item--active">
+                        <a href="/map" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+        
+                            </svg>
+                            <span>Map</span>
+                            
+                        </a>
+        
+                    </li>
+        
+                    <li class="side-nav__item">
+                        <a href="/peopleculture" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-man-woman"></use>
+        
+                            </svg>
+                            <span>People and Culture</span>
+                            
+                        </a>
+        
+                    </li>
+        
+                    <li class="side-nav__item">
+                        <a href="/travel" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-travel"></use>
+        
+                            </svg>
+                            <span>Travel</span>
+                            
+                        </a>
+        
+                    </li>
+        
+                    <li class="side-nav__item">
+                        <a href="/accomodation" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-chat"></use>
+        
+                            </svg>
+                            <span>Accomodation</span>
+                            
+                        </a>
+        
+                    </li>
+                    <li class="side-nav__item">
+                            <a href="/itineraries" class="side-nav__link">
+                               
+                                <span>Itineraries</span>
+                                
+                            </a>
+            
+                        </li>
+    
+                    <li class="side-nav__item">
+                        <a href="/allblogs" class="side-nav__link">
+                           
+                            <span>All blogs</span>
+                            
+                        </a>
+        
+                    </li>
+                </ul>
+                
+                <div class="legal">
+                    &copy: 2019 by chris. All rights reserved. 
+                </div>
+            </nav>
+    
+    <section class="all-blogs">
+
+            
+
+        <div class="user-nav-left background">
+            <span>
+                <h2>
+                    Sort by:
+                </h2>
+            </span>
+            <ul class="sort-blogs-list ">
+                <li><button>People</button></li>
+                <li><button>Travel</button></li>
+                <li><button>Culture</button></li>
+
+            </ul>
+        </div>
+
+
+            @each(post in posts)
+        <div class="blog-row" style=""; >
+            <div class="col-1-of-1">
+                <a href="/create/new">
+                
+                <div class="blog-box">
+                        <figcaption class="post__user">
+                                <img src="img/user-1.jpg" alt="User 1" class="post__photo">
+                                <div class="post__user-box" style="width:100%;">
+                                        <a href=""><p class="post__user-name"><a href="#">{{ post.username }}</a></p></a>
+                                    
+                                </div>
+                                
+                                
+                            </figcaption> 
+                    <!--loop through blogs and show each blog in own card-->
+                    <div style="">
+                <h3 class="heading-teriary">{{ post.title }}</h3>
+                <p class="post-meta">Posted by
+                    <a href="#">{{ post.username }}</a>
+                    on {{ post.createdAt.toDateString() }}
+                  </p>
+            </div>
+        </div>
+           
+        </a>
+        </div>
+    </div>  
+    @endeach
+            
+            
+          
+           
+    
+    </section>
+    
+            
+    
+    <!-- recent posts section -->
+    
+    
+    
+              
+               
+          
+    
+    
+    
+    
+    </div>
+
+@endsection

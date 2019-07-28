@@ -1,0 +1,288 @@
+@layout('layouts.dashboard')
+ 
+@section('content')
+
+
+
+        
+        <div class="content">
+                <nav class="sidebar">
+                        <ul class="side-nav">
+                            <li class="side-nav__item side-nav__item--active">
+                                <a href="/map" class="side-nav__link">
+                                    <svg class="side-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-map"></use>
+                
+                                    </svg>
+                                    <span>Map</span>
+                                    
+                                </a>
+                
+                            </li>
+                
+                            <li class="side-nav__item">
+                                <a href="/peopleculture" class="side-nav__link">
+                                    <svg class="side-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-man-woman"></use>
+                
+                                    </svg>
+                                    <span>People and Culture</span>
+                                    
+                                </a>
+                
+                            </li>
+                
+                            <li class="side-nav__item">
+                                <a href="/travel" class="side-nav__link">
+                                    <svg class="side-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-travel"></use>
+                
+                                    </svg>
+                                    <span>Travel</span>
+                                    
+                                </a>
+                
+                            </li>
+                
+                            <li class="side-nav__item">
+                                <a href="/accomodation" class="side-nav__link">
+                                    <svg class="side-nav__icon">
+                                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                
+                                    </svg>
+                                    <span>Accomodation</span>
+                                    
+                                </a>
+                
+                            </li>
+                            <li class="side-nav__item">
+                                    <a href="/itineraries" class="side-nav__link">
+                                       
+                                        <span>Itineraries</span>
+                                        
+                                    </a>
+                    
+                                </li>
+                        </ul>
+                        <div class="legal">
+                            &copy: 2019 by trillo. All rights reserved. 
+                        </div>
+                    </nav>
+            
+
+
+            <main class="hotel-view">
+                <div class="headerphotos">
+                    <figure class="headerphotos__item">
+                        <img height="" src="img/vanuatu-family.jpg" alt="Photo of hotel 1" class="headerphotos__photo">
+                    </figure>
+                    <figure class="headerphotos__item">
+                        <img height="" src="img/vanuatu-children.jpg" alt="Photo of hotel 2" class="headerphotos__photo">
+                    </figure>
+                    <figure class="headerphotos__item">
+                        <img height="" src="img/vanuatu-food.jpg" alt="Photo of hotel 3" class="headerphotos__photo">
+                    </figure>
+                    
+                </div>
+                
+                <div class="overview">
+
+                        <div class="intro-section" >
+                                <span class="intro-section-layout">
+                                    <h1 class="overview__heading">People and Culture</h1>
+                                </span>
+                            </div>
+
+                            
+                   
+                   <!-- <div class="overview__stars">
+                        <svg class="overview__icon-star">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg class="overview__icon-star">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg class="overview__icon-star">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg class="overview__icon-star">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <svg class="overview__icon-star">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                    </div>-->
+
+                    
+                </div>
+                <div class="detail">
+                        <div class="description dat-box-shadow">
+                          <h2>Post Title</h2>
+                          <br>
+                          <div>
+                              <img class="article-image" src="img/ex3.jpg" alt="" 
+                              style="height: 30rem; margin-bottom: 3rem"
+
+                              
+                              
+                              >
+                          </div>
+                            
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+        
+                            </p>
+                            <p class="paragraph">
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+        
+                            </p>
+                            
+                            <div class="recommend">
+                                <p class="recommend__count">
+                                    Lucy and 3 other friends recommend this post.
+                                </p>
+                                <div class="recommend__friends">
+                                    <img src="img/user-3.jpg" alt="Friend 1" class="recommend__photo">
+                                    <img src="img/user-4.jpg" alt="Friend 2" class="recommend__photo">
+                                    <img src="img/user-5.jpg" alt="Friend 3" class="recommend__photo">
+                                    <img src="img/user-6.jpg" alt="Friend 4" class="recommend__photo">
+        
+                                </div>
+                                
+                            </div>
+                            <button class=" btn btn--white btn--animated" style="margin-top:2rem;">
+                                    <span class="">Read full article</span>
+                            </button>
+                        </div>
+        
+                        <figure class="user-reviews">
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                        @each(post in posts)
+        <div class="post-preview">
+          <a href="/post/{{ post._id }}">
+            <h2 class="post-title">
+              {{ post.title }}
+            </h2>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">{{ post.username }}</a>
+            on {{ post.createdAt.toDateString() }}
+          </p>
+        </div>
+        <hr>
+      @endeach
+                                </blockquote>
+                                <!--<figcaption class="review__user">
+                                    <img src="img/user-1.jpg" alt="User 1" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Nick Smith</p>
+                                        <p class="review__user-date">Feb 23rd, 2019</p>
+                                    </div>
+                                    <div class="review__rating">7.8</div>
+                                </figcaption> -->           
+                            </figure>
+        
+                           
+                                    
+        
+                                    <button class="btn-inline" style="font-size:2rem;">Show all <span>&rarr;</span></button>
+                                
+                        </figure>
+                    </div>
+
+                <div class="detail" >
+                    <div class="description" style="flex: 0 0 100%; padding: 0px " >
+
+                            <iframe 
+                            align="left"
+                            width="600" 
+                            height="415"
+                            
+                            src="https://www.youtube.com/embed/Ys_hUIPta3U" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                            
+                            </iframe>
+                            
+
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+
+                        </p>
+                        <p class="paragraph">
+                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+
+                        </p>
+                        <p class="paragraph">
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+    
+                            </p>
+                            <p class="paragraph">
+                                    Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                    Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                    Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                   
+                                </p>
+                                <p class="paragraph">
+                                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                       
+                                    </p>
+                                    <p class="paragraph">
+                                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                            Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+                                           
+                                        </p>
+                      <!--  <ul class="list">
+                            <li class="list__item">Close to the beach</li>
+                            <li class="list__item">Breakfast included</li>
+                            <li class="list__item">Free airport shuttle</li>
+                            <li class="list__item">Free wifi</li>
+                            <li class="list__item">Air condition and heating</li>
+                            <li class="list__item">Pets allowed</li>
+                            <li class="list__item">We speak all languahes</li>
+                            <li class="list__item">Perfect for families</li>
+                        </ul>-->
+                        <div class="recommend">
+                            <p class="recommend__count">
+                                Lucy and 3 other friends like this article.
+                            </p>
+                            <div class="recommend__friends">
+                                <img src="img/user-3.jpg" alt="Friend 1" class="recommend__photo">
+                                <img src="img/user-4.jpg" alt="Friend 2" class="recommend__photo">
+                                <img src="img/user-5.jpg" alt="Friend 3" class="recommend__photo">
+                                <img src="img/user-6.jpg" alt="Friend 4" class="recommend__photo">
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    
+                </div>
+                
+                      
+
+                
+                
+            </main>
+        </div>
+   
+
+
+
+@endsection
